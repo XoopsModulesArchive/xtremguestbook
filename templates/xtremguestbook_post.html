@@ -1,0 +1,37 @@
+<table width="100%" cellspacing="0" class="outer" dir="rtl" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr>
+    <th width='100%' align="left" colspan="2">
+    <p align="right"><{$post.i}>) <{$post.title}></td>
+  </tr>
+  <tr>
+    <td class='head'><{$post.poster}></td>
+	<td class="head" align="right"><div style="text-align:left; margin-bottom:-17px;">
+      <p style="text-align: right"><{$post.email}> <{$post.url}></div>
+    <p align="left"><img src='<{$xoops_url}>/images/icons/posticon.gif' alt=''> <span class='comDate'><{$post.date}></span></td>
+  </tr>
+  <tr align='left'>
+    <td class='odd' width='22%'>
+	  <div class="comUserRankText">
+        <p align="right"><{$post.rank}></div>
+	  <div class="comUserRankImg">
+        <p align="right"><{$post.rank_img}></div>
+	  <div class="comUserImg">
+        <p align="right"><{$post.avatar}></div>
+	</td>
+	<td width='88%' class='odd' valign='top'>
+	  <p align="right"><{$post.msg}>
+	  <{if $post.note_msg}>
+	  	<br><br></p>
+      <HR>
+      <p align="right"><i><{$post.note_title}> <{$post.note_msg}></i>
+      <{/if}>
+	</td>
+  </tr>
+<{if $xoops_isadmin}>
+  <tr valign='bottom'>
+    <td class="foot">&nbsp;</td>
+    <td class='foot' align="right">
+    <p align="left"><{$post.admin}></td>
+  </tr>
+<{/if}>
+</table>

@@ -1,0 +1,39 @@
+<{if $gb_show_preview}>
+  <{include file="db:xtremguestbook_post.html" comment=$comment}>
+<{/if}>
+<br><br>
+<form name='guestbook' action='post.php' onsubmit='return xoopsValidateXtrem("title", "message", "username", "submitbutton");' method='post'>
+<table width="100%" cellspacing="0" class="outer" dir="rtl" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr>
+    <th colspan="2" align="center"><{$gb_sign}></th>
+  </tr>
+  <tr>
+    <td class="head" colspan="2" align="center"><{$gb_back}><br><{$gb_desc}></td>
+  </tr>
+  <tr class="odd">
+    <td><{$tbl_name}></td>
+	<td><{$frm_name}></td>
+  </tr>
+  <tr class="even">
+    <td><{$tbl_email}></td>
+	<td><{$frm_email}></td>
+  </tr>
+  <tr class="odd">
+    <td><{$tbl_url}></td>
+	<td><{$frm_url}></td>
+  </tr>
+  <tr class="even">
+    <td><{$tbl_title}></td>
+	<td><{$frm_title}></td>
+  </tr>
+  <tr class="odd">
+    <td><{$tbl_message}></td>
+	<td><{$frm_message}></td>
+  </tr>
+  <tr>
+	<td class="foot">&nbsp;</td>
+	<td class="foot" align="left">
+    <p align="right"><{$frm_preview}> <{$frm_submit}></td>
+  </tr>
+</table>
+</form>

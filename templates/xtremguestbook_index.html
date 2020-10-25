@@ -1,0 +1,26 @@
+<table width="100%" cellspacing="0" class="outer" dir="rtl" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr>
+    <th><{$gb_title}></th>
+  </tr>
+  <tr>
+    <td class="head" style="text-align:center;padding:10px 10px 10px 10px;"><{$gb_sign}></td>
+  </tr>
+  <tr>
+    <td class="even" style="text-align:center;"><{$gb_message_count}></td>
+  </tr>
+  <{if $gb_moderated}>
+  <tr>
+    <td class="odd" style="text-align:center;"><{$gb_moderate_text}></td>
+  </tr>
+  <{/if}>
+</table>
+<br><div align="center"><{$gb_page_nav}></div><br>
+<{foreach item=post from=$gb_posts}>
+  <{include file="db:xtremguestbook_post.html" comment=$comment}>
+  <br><br>
+<{/foreach}>
+<div align="center"><{$gb_page_nav}></div><br>
+<table width="100%" cellspacing="0" class="outer" dir="rtl" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+
+</table>
+<p align="right"><{include file='db:system_notification_select.html'}></p>
